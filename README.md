@@ -1,6 +1,6 @@
 # 🌌 Evrenin Yapıtaşı: Maddeden Yazılıma (From Matter to Bit)
 
-[![Web App](https://img.shields.io/badge/Web_App-Interactive-00f2fe?style=for-the-badge&logo=html5)](index.html)
+[![Web App](https://img.shields.io/badge/Web_App-8_Interactive_Labs-00f2fe?style=for-the-badge&logo=html5)](index.html)
 [![Python Tests](https://img.shields.io/badge/Python_Tests-Passing-06d6a0?style=for-the-badge&logo=python)](cli/test_universe.py)
 [![Physics & Info Theory](https://img.shields.io/badge/Physics-It_From_Bit-9d4edd?style=for-the-badge)](docs/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-ffd166?style=for-the-badge)](LICENSE)
@@ -17,7 +17,7 @@
 
 **"Evren neden ve neyden oluşuyor?"** sorusu, insanlığın 2600 yılı aşkın süredir yanıt aradığı en temel ontolojik ve fiziksel problemdir.
 
-Bu proje; insanlığın evrenin temel yapıtaşlarına dair anlayışının **"Madde"** (Atom/Töz) paradigmasından **"Enerji ve Alanlar"** (Kuantum Alan Teorisi, $E=mc^2$) paradigmasına, son aşamada ise **"Bilgi ve Hesaplama"** (Dijital Fizik, *It from Bit*, Holografik Prensip, Simülasyon Hipotezi) aşamasına nasıl evrildiğini interaktif simülatörler, matematiksel formüller, akademik makaleler ve bir Python hesaplama CLI'ı ile sistematik olarak sunan kapsamlı bir platformdur.
+Bu proje; insanlığın evrenin temel yapıtaşlarına dair anlayışının **"Madde"** (Atom/Töz) paradigmasından **"Enerji ve Alanlar"** (Kuantum Alan Teorisi, $E=mc^2$) paradigmasına, son aşamada ise **"Bilgi ve Hesaplama"** (Dijital Fizik, *It from Bit*, Holografik Prensip, Simülasyon Hipotezi) aşamasına nasıl evrildiğini **8 canlı simülasyon laboratuvarı**, **24 kronolojik dönüm noktası**, **Kavram Sözlüğü**, **10 soruluk Kozmik Test**, matematiksel formüller, akademik makaleler ve Python hesaplama CLI'ı ile sistematik olarak sunan kapsamlı bir platformdur.
 
 ---
 
@@ -31,58 +31,18 @@ flowchart LR
 
 ---
 
-## 1. Antik Çağ ve Klasik Dönem: Madde ve Arkhe Arayışı
+## 🔬 8 İnteraktif Simülasyon Laboratuvarı
 
-Evrenin neyden oluştuğuna dair ilk rasyonel sorgulamalar Antik İyonya'da (Miletos) başlamıştır. Mitolojik tanrılar yerine her şeyin temelindeki o ilk madde (*Arkhe*) aranmıştır.
+Web uygulamasında 8 adet gerçek zamanlı, canlı etkileşimli fizik ve enformasyon simülatörü yer almaktadır:
 
-* **Thales (MÖ 624-546):** Her şeyin temelinin **"Su"** olduğunu öne sürdü. Suyun katı, sıvı ve gaz fazlarına geçebilmesi ilk monist indirgemenin temelidir.
-* **Anaksimandros (MÖ 610-546):** Temel kaynağın belirli bir madde değil, sonsuz ve sınırsız bir potansiyel alan olan **"Apeiron"** olduğunu savundu.
-* **Anaksimenes (MÖ 585-528):** Temel maddenin **"Hava"** (*Pneuma*) olduğunu, seyrelme (ateş) ve yoğunlaşma (su, toprak, taş) mekanizmasıyla çeşitliliğin doğduğunu belirtti.
-* **Herakleitos (MÖ 535-475):** Değişimin ve evrenin temelinin bir nesne değil süreç (**"Ateş"**) olduğunu, bu dönüşümü yöneten kozmik algoritmanın ise **"Logos"** (Kozmik Yasa/Yazılım) olduğunu savundu.
-* **Demokritos (MÖ 460-370):** Evrenin bölünemez, sonsuz küçüklükteki geometrik parçacıklardan (**Atomos**) ve aralarındaki boşluktan (**Kenos**) oluştuğunu öne sürdü.
-
-> *"Görünüşte renk vardır, tatlılık vardır, acılık vardır; ama gerçekte sadece atomlar ve boşluk vardır."* — **Demokritos**
-
----
-
-## 2. Modern Fizik: Madde ve Enerji Eşdeğerliği ($E=mc^2$)
-
-20. yüzyılın başlarında evrenin katı parçacıklardan ziyade sürekli titreşen kuantum alanları ve enerjiden ibaret olduğu anlaşıldı.
-
-* **Max Planck (1900):** Enerjinin sürekli bir akış değil, kesikli paketler (**Kuantum**, $E = h\nu$) halinde salındığını keşfederek kuantum fiziğini başlattı.
-* **Albert Einstein (1905):** $E=mc^2$ denklemi ile madde ve enerjinin aynı madalyonun iki yüzü olduğunu kanıtladı. Kütle, son derece yoğunlaşmış enerjidir.
-* **Heisenberg & Schrödinger (1925-1927):** Parçacıkların kesin yörüngeleri yerine olasılık dalgaları ($\Psi$) ve belirsizlik ilkesi ($\Delta x \Delta p \ge \hbar/2$) keşfedildi.
-* **Kuantum Alan Teorisi (QFT) & Standart Model:** Parçacıklar temel değildir; evren uzayın her yerine yayılmış kuantum alanlarıyla doludur. Elektron, elektron alanının; foton ise elektromanyetik alanın bir titreşimidir.
-* **Karanlık Madde & Karanlık Enerji:** Bildiğimiz atomlar ve Standart Model maddesi evrenin sadece **%5'ini** oluşturmaktadır.
-
----
-
-## 3. Dijital Fizik ve Enformasyon: Evren Bir Yazılım mı?
-
-Son yarım yüzyılda bilgi teorisi, termodinamik ve kuantum mekaniği birleşerek bilginin evrenin en temel yapıtaşı olduğunu ortaya koydu.
-
-* **Claude Shannon (1948):** Bilgiyi matematiksel olarak tanımladı, **"Bit"** kavramını literatüre soktu ve Shannon Entropisini ($H = -\sum p_i \log_2 p_i$) keşfetti.
-* **Rolf Landauer (1961):** **"Bilgi Fizikseldir"** (Information is Physical) ilkesini kanıtladı. 1 bit bilginin silinmesi çevreye en az $E_{\text{min}} \ge k_B T \ln 2$ ısı yaymak zorundadır.
-* **Konrad Zuse (1969):** İlk programlanabilir bilgisayarı yapan Zuse, *"Rechnender Raum"* (Hesaplayan Uzay) eseriyle evrenin devasa bir **Hücresel Otomat** (Cellular Automaton) olduğunu öne sürdü.
-* **Jacob Bekenstein & Stephen Hawking (1974):** Kara delik entropisinin hacimle değil, olay ufku yüzey alanıyla ($S_{BH} = \frac{k_B A}{4\ell_P^2}$) orantılı olduğunu keşfettiler.
-* **John Archibald Wheeler (1989):** **"It from Bit"** doktriniyle fiziksel gerçekliğin evet/hayır ikili bilgi sorgularından doğduğunu ilan etti.
-* **Holografik İlke & AdS/CFT (1997):** 3D evrendeki kütleçekimin, 2D sınır yüzeyindeki kuantum enformasyonunun bir holografik yansıması olduğu matematiksel olarak kanıtlandı.
-* **Nick Bostrom (2003):** Simülasyon Argümanı (Trilemma) ile post-insan uygarlıkların varlığı halinde neredeyse kesinlikle bir **bilgisayar simülasyonunda** yaşadığımızı olasılıksal olarak ispatladı.
-* **Seth Lloyd (2006):** Evrenin Büyük Patlama'dan bu yana $10^{122}$ işlem gerçekleştiren $10^{92}$ bitlik devasa bir **Kozmik Kuantum Bilgisayarı** olduğunu hesapladı.
-* **Stephen Wolfram (2020):** Wolfram Fizik Projesi ve **Ruliad** ile tüm uzay-zamanın soyut hipergraf yeniden yazma kurallarından türediğini modellemektedir.
-
----
-
-## 🔬 Projedeki İnteraktif Simülatör Laboratuvarları
-
-Web uygulamasında 6 canlı simülatör yer almaktadır:
-
-1. **Atom & Kuantum Orbitalleri Simülatörü:** Demokritos sert küresi, Bohr yörüngeleri ve Schrödinger kuantum olasılık bulutunun gerçek zamanlı görselleştirmesi.
-2. **Kuantum Çift Yarık & Dalga Çöküşü:** Fotonların dalga girişimi ve gözlemci dedektörü açıldığında dalga fonksiyonunun parçacığa çöküşü.
-3. **Wolfram Hücresel Otomatı:** Kural 30 (kaos), Kural 110 (Turing tam), Kural 90 (fraktal) ve Kural 184 (akış dinamiği).
-4. **Qubit & Bloch Küresi Simülatörü:** $|0\rangle, |1\rangle$ durum vektörü, Hadamard $H$, Pauli $X, Z$ mantık kapıları ve süperpozisyon olasılıkları.
-5. **Kara Delik & Holografik Hesaplayıcı:** Kütle girdisine göre Schwarzschild yarıçapı, olay ufku alanı, Bekenstein-Hawking entropisi, Planck piksel sayısı ve depolanan bit miktarı.
-6. **Bostrom Simülasyon Trilemması:** $f_p$ ve $N_I$ parametrelerine bağlı olarak $P(\text{Sim}) = \frac{f_p N_I}{f_p N_I + 1}$ Bayesyen olasılık grafiği.
+1. **Atom & Kuantum Orbitalleri Simülatörü:** Demokritos sert küresi, Bohr kuantum yörüngeleri ve Schrödinger kuantum olasılık bulutunun gerçek zamanlı görselleştirmesi ve foton soğurma/sıçrama tetikleyicisi.
+2. **Kuantum Çift Yarık & Dalga Çöküşü:** Fotonların dalga girişimi ve gözlemci dedektörü açıldığında dalga fonksiyonunun parçacığa çöküş dinamiği.
+3. **Konrad Zuse & Wolfram Hücresel Otomatı:** Kural 30 (kaos), Kural 110 (Evrensel Turing tam), Kural 90 (Sierpinski fraktalı) ve Kural 184 (akış dinamiği).
+4. **Qubit & Bloch Küresi Simülatörü:** 3D Bloch küresi üzerinde süperpozisyon durum vektörü $|\Psi\rangle = \alpha|0\rangle + \beta|1\rangle$, Hadamard $H$, Pauli $X, Z$ kuantum mantık kapıları ve olasılık çubukları.
+5. **Kara Delik & Holografik Hesaplayıcı:** Güneş kütleli, Cygnus X-1, Sagittarius A*, M87* ve TON 618 hazır şablonları; Schwarzschild yarıçapı, olay ufku alanı, Bekenstein-Hawking entropisi, Planck piksel sayısı ve Terabayt cinsinden bilgi depolama kapasitesi.
+6. **Nick Bostrom Simülasyon Trilemması:** $f_p$ (post-insan çağı oranı) ve $N_I$ (ortalama simülasyon sayısı) parametrelerine bağlı olarak $P(\text{Sim}) = \frac{f_p N_I}{f_p N_I + 1}$ Bayesyen olasılık hesabı.
+7. **Kuantum Dolanıklık ve Bell Eşitsizliği (EPR):** Alice ve Bob dedektör açılarının ($\theta_A, \theta_B$) kontrolü, kuantum korelasyonu $E(\theta_A, \theta_B) = -\cos(2(\theta_A - \theta_B))$ ve CHSH testiyle yerel gerçekçiliğin ihlali ($S = 2\sqrt{2} \approx 2.828 > 2$).
+8. **Kozmik Ölçekler ve Seth Lloyd Bilgi Hiyerarşisi:** Planck ölçeğinden ($10^{-35}$ m) Gözlemlenebilir Evrene ($10^{26}$ m) fiziksel boyutlar, kütleler ve bilgi (Bit) kapasiteleri.
 
 ---
 
@@ -91,10 +51,12 @@ Web uygulamasında 6 canlı simülatör yer almaktadır:
 | Boyut / Özellik | 1. Madde Paradigması | 2. Enerji & Alan Paradigması | 3. Bilgi Paradigması (It from Bit) |
 | :--- | :--- | :--- | :--- |
 | **Temel Ontoloji** | Bölünemez parçacıklar, katı bilyeler | Sürekli alanlar, dalgalanmalar, kuantlar | Ayrık bitler/qubitler, algoritmalar |
-| **Temel Birim** | Kütle (kg) | Joule / Kuantum ($E = h\nu$) | Bit (0/1) / Qubit ($|\Psi\rangle$) |
+| **Temel Birim** | Kütle (kg / Dalton) | Joule / Kuantum ($E = h\nu$) | Bit (0/1) / Qubit ($|\Psi\rangle$) |
 | **Korunum Yasası** | Kütlenin Korunumu (Lavoisier) | Enerjinin Korunumu ($E=mc^2$) | Bilginin Korunumu (Üniterlik) |
 | **Uzay-Zaman** | Sabit, mutlak 3D sahne (Newton) | Dinamik eğrilen 4D manifold (Einstein) | Kuantum dolanıklık ağlarından türeyen hologram |
 | **Kritik Denklem** | $F = ma$, $F = G \frac{m_1 m_2}{r^2}$ | $E = mc^2$, $\Delta x \Delta p \ge \hbar/2$ | $S = \frac{k_B A}{4\ell_P^2}$, $E_{\text{min}} \ge k_B T \ln 2$ |
+| **Hız / İşlem Sınırı**| Sonlu mekanik hızlar | Işık Hızı ($c = 299,792,458\text{ m/s}$) | Margolus-Levitin ($R_{\text{max}} = \frac{2E}{\pi\hbar}$) |
+| **Gözlemcinin Rolü**| Dışsal ve pasif seyirci | Çerçeveye bağlı (Lorentz bükülmesi) | Aktif katılımcı (Dalga çöküşü) |
 
 ---
 
@@ -108,6 +70,9 @@ python cli/universe_info.py
 
 # Birim testleri çalıştırma
 python cli/test_universe.py
+
+# JSON çıktı alma
+python cli/universe_info.py --json
 ```
 
 ---
@@ -116,15 +81,15 @@ python cli/test_universe.py
 
 ```
 evrenin-yapitasi/
-├── index.html                   # Ana interaktif web portalı
+├── index.html                   # Ana interaktif web portalı (8 Lab & Sözlük)
 ├── css/
 │   └── style.css                # Modern kozmik glassmorphic tema & animasyonlar
 ├── js/
-│   ├── physics.js               # Fizik ve simülasyon hesaplama motoru
-│   ├── data.js                  # Kronoloji, karşılaştırma matrisi & quiz veri tabanı
+│   ├── physics.js               # Fizik, Bell CHSH ve simülasyon hesaplama motoru
+│   ├── data.js                  # 24 Dönüm noktası, matris, sözlük & quiz veri tabanı
 │   ├── audio.js                 # Web Audio API prosedürel kozmik ses sentezleyici (432Hz)
 │   ├── canvas.js                # Arka plan kuantum parçacık ve ağ animasyonu
-│   └── app.js                   # Ana kullanıcı etkileşim ve lab kontrolcüsü
+│   └── app.js                   # 8 Lab kontrolcüsü, sözlük, quiz ve dil yöneticisi
 ├── cli/
 │   ├── universe_info.py         # Terminal CLI hesaplama aracı
 │   └── test_universe.py         # Fizik denklemleri unit testleri
@@ -133,7 +98,12 @@ evrenin-yapitasi/
 │   ├── 02_kuantum_mekanigi_ve_alan_teorisi.md   # Kuantum alanları ve Standart Model
 │   ├── 03_dijital_fizik_ve_it_from_bit.md       # Dijital fizik, Landauer & Simülasyon
 │   ├── 04_matematiksel_modeller_ve_formuller.md # Sabitler ve temel denklemler
-│   └── 05_kaynakca_ve_okuma_listesi.md          # Akademik kaynakça ve kitaplar
+│   ├── 05_kaynakca_ve_okuma_listesi.md          # Akademik kaynakça ve kitaplar
+│   └── 06_kavram_sozlugu_ve_terimler.md         # Kapsamlı kavram sözlüğü
+├── src/
+│   ├── types/index.ts           # TypeScript arayüz ve tip tanımları
+│   ├── utils/physics.ts         # TypeScript fizik hesaplama yardımcıları
+│   └── data/timelineData.ts     # TypeScript veri tipleri
 ├── .github/workflows/
 │   └── deploy.yml               # GitHub Actions CI/CD otomatik yayınlama
 └── README.md                    # Proje dokümantasyonu
@@ -143,12 +113,11 @@ evrenin-yapitasi/
 
 ## 🚀 Çalıştırma
 
-Projeyi çalıştırmak için herhangi bir ekstra derleme aracına ihtiyaç yoktur:
-1. `index.html` dosyasını tarayıcınızda açın veya yerel bir sunucu başlatın:
-   ```bash
-   python -m http.server 3000
-   ```
-2. Tarayıcınızdan `http://localhost:3000` adresine gidin.
+Projeyi çalıştırmak için herhangi bir sunucu kurmadan doğrudan `index.html` dosyasını tarayıcınızda açabilir veya yerel sunucu başlatabilirsiniz:
+```bash
+python -m http.server 3000
+```
+Tarayıcınızdan `http://localhost:3000` adresine gidin.
 
 ---
 

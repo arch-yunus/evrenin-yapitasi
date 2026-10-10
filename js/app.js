@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // State
   let currentLang = 'tr';
   let activeEraFilter = 'all';
+  let activeGlossaryCategory = 'all';
   let activeLab = 'atom';
 
   // DOM Elements
@@ -18,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const timelineContainer = document.getElementById('timeline-cards-container');
   const timelineFilterBtns = document.querySelectorAll('.timeline-filter-btn');
   const timelineSearchInput = document.getElementById('timeline-search');
+  const glossaryContainer = document.getElementById('glossary-container');
+  const glossaryFilterBtns = document.querySelectorAll('.glossary-filter-btn');
   const modalOverlay = document.getElementById('event-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
 
@@ -45,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
       updatePageLanguage();
       renderTimeline();
       renderComparisonMatrix();
+      renderGlossary();
       renderQuiz();
+      initOrResumeLab(activeLab);
       if (window.CosmicAudio) {
         window.CosmicAudio.playQuantumPing(640);
       }
@@ -146,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Filter Buttons
+  // Filter Buttons for Timeline
   timelineFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       timelineFilterBtns.forEach(b => b.classList.remove('bg-cyan-500/20', 'text-quantum-cyan', 'border-quantum-cyan/50'));
@@ -255,6 +260,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Render Cosmic Glossary
+  function renderGlossary() {
+    if (!glossaryContainer || !window.APP_DATA.glossary) return;
+    glossaryContainer.innerHTML = '';
+
+    const terms = window.APP_DATA.glossary.filter(item => {
+      return activeGlossaryCategory === 'all' || item.category === activeGlossaryCategory;
+    });
+
+    const catBadgeColors = {
+      ancient: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
+      quantum: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
+      information: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
+      cosmology: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
+    };
+
+    const catLabels = {
+      ancient: currentLang === 'tr' ? 'Antik Felsefe' : 'Ancient Philosophy',
+      quantum: currentLang === 'tr' ? 'Kuantum Fiziği' : 'Quantum Physics',
+      information: currentLang === 'tr' ? 'Bilgi Teorisi' : 'Information Theory',
+      cosmology: currentLang === 'tr' ? 'Kozmoloji & Holografi' : 'Cosmology & Holography'
+    };
+
+    terms.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'glass-panel p-5 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between';
+      
+      const termTitle = currentLang === 'tr' ? item.term : item.termEn;
+      const def = currentLang === 'tr' ? item.defTr : item.defEn;
+
+      card.innerHTML = `
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-mono border ${catBadgeColors[item.category] || 'border-slate-700'}">
+              ${catLabels[item.category] || item.category}
+            </span>
+          </div>
+          <h3 class="text-base md:text-lg font-bold text-white mb-2 text-quantum-cyan">
+            ${termTitle}
+          </h3>
+          <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
+            ${def}
+          </p>
+        </div>
+      `;
+
+      glossaryContainer.appendChild(card);
+    });
+  }
+
+  // Glossary Filter Buttons
+  glossaryFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      glossaryFilterBtns.forEach(b => b.classList.remove('bg-cyan-500/20', 'text-quantum-cyan', 'border-quantum-cyan/50'));
+      btn.classList.add('bg-cyan-500/20', 'text-quantum-cyan', 'border-quantum-cyan/50');
+      activeGlossaryCategory = btn.getAttribute('data-cat') || 'all';
+      renderGlossary();
+    });
+  });
+
   // Interactive Quiz Engine
   let quizCurrentIndex = 0;
   let quizScore = 0;
@@ -316,7 +381,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>
         <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-4 pb-2 border-b border-slate-800">
           <span>${currentLang === 'tr' ? `Soru ${quizCurrentIndex + 1} / ${questions.length}` : `Question ${quizCurrentIndex + 1} / ${questions.length}`}</span>
-          <span>${currentLang === 'tr' ? `Mevcut Puan: ${quizScore}` : `Current Score: ${quizScore}`}</span>
+          <span class="text-quantum-purple font-semibold">${q.category || ''}</span>
+          <span>${currentLang === 'tr' ? `Puan: ${quizScore}` : `Score: ${quizScore}`}</span>
         </div>
         <h3 class="text-base md:text-lg font-bold text-white mb-6">
           ${qText}
@@ -384,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------
-  // SIMULATION LABS CONTROLLERS
+  // SIMULATION LABS CONTROLLERS (8 LABS)
   // -------------------------------------------------------------
   const labNavBtns = document.querySelectorAll('.lab-nav-btn');
   const labViews = document.querySelectorAll('.lab-view');
@@ -398,6 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const activeView = document.getElementById(`lab-${activeLab}`);
       if (activeView) activeView.classList.remove('hidden');
       initOrResumeLab(activeLab);
+      if (window.CosmicAudio) window.CosmicAudio.playQuantumPing(550);
     });
   });
 
@@ -408,6 +475,8 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (labKey === 'qubit') initQubitLab();
     else if (labKey === 'blackhole') initBlackHoleLab();
     else if (labKey === 'bostrom') initBostromLab();
+    else if (labKey === 'entanglement') initEntanglementLab();
+    else if (labKey === 'scales') initScalesLab();
   }
 
   // LAB 1: Atom & Quantum Orbitals Lab
@@ -555,12 +624,11 @@ document.addEventListener('DOMContentLoaded', () => {
           dsCtx.fillRect(bx, h / 2 - 20, 8, 40);
           dsCtx.fillRect(bx, h / 2 + 40, 8, h / 2 - 40);
 
-          // Slit openings: y1 = h/2 - 30, y2 = h/2 + 30
           // Detector indicator if active
           if (dsObserver) {
             dsCtx.fillStyle = '#f72585';
             dsCtx.font = '11px Inter';
-            dsCtx.fillText('👁️ Gözlemci Dedektörü AÇIK', bx - 30, 25);
+            dsCtx.fillText(currentLang === 'tr' ? '👁️ Gözlemci Dedektörü AÇIK' : '👁️ Observer Detector ON', bx - 30, 25);
           }
 
           // Screen at right: x = w - 40
@@ -627,8 +695,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // LAB 3: Cellular Automata (Wolfram & Conway's Game of Life)
-  let caCanvas, caCtx, caGrid = [], caRule = 30, caMode = '1d', caRunning = true;
+  // LAB 3: Cellular Automata (Wolfram)
+  let caCanvas, caCtx, caGrid = [], caRule = 30;
   function initCellularLab() {
     caCanvas = document.getElementById('cellular-canvas');
     if (!caCanvas) return;
@@ -779,6 +847,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // LAB 5: Black Hole Holographic Calculator
   function initBlackHoleLab() {
     const massSlider = document.getElementById('bh-mass-slider');
+    const presetSelect = document.getElementById('bh-preset-select');
     const massValEl = document.getElementById('bh-mass-val');
     const rsEl = document.getElementById('bh-rs-val');
     const areaEl = document.getElementById('bh-area-val');
@@ -786,22 +855,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const bitsEl = document.getElementById('bh-bits-val');
     const tempEl = document.getElementById('bh-temp-val');
 
-    function update() {
+    function updateFromSlider() {
       if (!massSlider) return;
       const mSun = parseFloat(massSlider.value);
-      if (massValEl) massValEl.textContent = `${mSun} M☉ (${(mSun * 1.989e30).toExponential(2)} kg)`;
+      renderValues(mSun);
+    }
+
+    function renderValues(mSun) {
+      if (massValEl) massValEl.textContent = `${mSun.toLocaleString()} M☉ (${(mSun * 1.989e30).toExponential(2)} kg)`;
       const info = window.PhysicsEngine.calculateBlackHoleInfo(mSun * 1.98847e30);
 
-      if (rsEl) rsEl.textContent = `${(info.rs / 1000).toFixed(2)} km`;
+      if (rsEl) rsEl.textContent = `${(info.rs / 1000).toLocaleString('tr-TR', { maximumFractionDigits: 2 })} km`;
       if (areaEl) areaEl.textContent = `${window.PhysicsEngine.formatSciNum(info.area)} m²`;
       if (entropyEl) entropyEl.textContent = `${window.PhysicsEngine.formatSciNum(info.entropyJK)} J/K`;
-      if (bitsEl) bitsEl.textContent = `${window.PhysicsEngine.formatSciNum(info.bits)} bit (~${window.PhysicsEngine.formatSciNum(info.gigabytes)} GB)`;
+      if (bitsEl) bitsEl.textContent = `${window.PhysicsEngine.formatSciNum(info.bits)} bit (~${window.PhysicsEngine.formatSciNum(info.terabytes)} TB)`;
       if (tempEl) tempEl.textContent = `${window.PhysicsEngine.formatSciNum(info.hawkingTempK)} K`;
     }
 
+    if (presetSelect) {
+      presetSelect.onchange = (e) => {
+        const val = parseFloat(e.target.value);
+        if (massSlider && val <= 100) massSlider.value = val;
+        renderValues(val);
+      };
+    }
+
     if (massSlider) {
-      massSlider.oninput = update;
-      update();
+      massSlider.oninput = updateFromSlider;
+      updateFromSlider();
     }
   }
 
@@ -834,9 +915,154 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Initial Runs
+  // LAB 7: Quantum Entanglement & Bell Inequality
+  let bellCanvas, bellCtx;
+  function initEntanglementLab() {
+    bellCanvas = document.getElementById('bell-canvas');
+    if (!bellCanvas) return;
+    bellCtx = bellCanvas.getContext('2d');
+    bellCanvas.width = bellCanvas.parentElement.clientWidth || 360;
+    bellCanvas.height = 200;
+
+    const angleASlider = document.getElementById('bell-angle-a-slider');
+    const angleBSlider = document.getElementById('bell-angle-b-slider');
+    const angleAVal = document.getElementById('bell-angle-a-val');
+    const angleBVal = document.getElementById('bell-angle-b-val');
+    const corrVal = document.getElementById('bell-corr-val');
+    const chshVal = document.getElementById('bell-chsh-val');
+    const badge = document.getElementById('bell-status-badge');
+
+    function updateBell() {
+      if (!angleASlider || !angleBSlider) return;
+      const degA = parseFloat(angleASlider.value);
+      const degB = parseFloat(angleBSlider.value);
+      const radA = (degA * Math.PI) / 180;
+      const radB = (degB * Math.PI) / 180;
+
+      if (angleAVal) angleAVal.textContent = `${degA}°`;
+      if (angleBVal) angleBVal.textContent = `${degB}°`;
+
+      const corr = window.PhysicsEngine.calculateBellCorrelation(radA, radB);
+      if (corrVal) corrVal.textContent = corr.toFixed(4);
+
+      // Evaluate CHSH with standard optimal test angles relative to A and B
+      const chsh = window.PhysicsEngine.calculateCHSH(radA, radA + Math.PI / 4, radB, radB + Math.PI / 4);
+      if (chshVal) chshVal.textContent = chsh.S.toFixed(3);
+
+      if (badge) {
+        if (chsh.violatesLocalRealism) {
+          badge.className = 'mt-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
+          badge.textContent = currentLang === 'tr' ? '⚡ Yerel Gerçekçilik İhlal Edildi (Kuantum Dolanık)' : '⚡ Local Realism Violated (Entangled)';
+        } else {
+          badge.className = 'mt-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40';
+          badge.textContent = currentLang === 'tr' ? 'Klasik Sınır İçinde (S ≤ 2)' : 'Within Classical Bound (S <= 2)';
+        }
+      }
+
+      drawBellGraphic(degA, degB, corr);
+    }
+
+    function drawBellGraphic(degA, degB, corr) {
+      if (!bellCtx) return;
+      const w = bellCanvas.width;
+      const h = bellCanvas.height;
+      bellCtx.clearRect(0, 0, w, h);
+
+      const cx1 = w * 0.28;
+      const cx2 = w * 0.72;
+      const cy = h / 2;
+      const r = 38;
+
+      // Source photon emission in center
+      bellCtx.beginPath();
+      bellCtx.arc(w / 2, cy, 8, 0, Math.PI * 2);
+      bellCtx.fillStyle = '#f72585';
+      bellCtx.fill();
+      bellCtx.font = '10px monospace';
+      bellCtx.fillStyle = '#ffffff';
+      bellCtx.textAlign = 'center';
+      bellCtx.fillText('|Ψ⁺⟩', w / 2, cy - 14);
+
+      // Entanglement link line
+      bellCtx.beginPath();
+      bellCtx.moveTo(cx1, cy);
+      bellCtx.lineTo(cx2, cy);
+      bellCtx.strokeStyle = 'rgba(0, 242, 254, 0.4)';
+      bellCtx.lineWidth = 2;
+      bellCtx.setLineDash([4, 4]);
+      bellCtx.stroke();
+      bellCtx.setLineDash([]);
+
+      // Alice polarizer circle
+      bellCtx.beginPath();
+      bellCtx.arc(cx1, cy, r, 0, Math.PI * 2);
+      bellCtx.strokeStyle = 'rgba(0, 242, 254, 0.6)';
+      bellCtx.stroke();
+      const ax = cx1 + r * Math.cos((degA * Math.PI) / 180);
+      const ay = cy - r * Math.sin((degA * Math.PI) / 180);
+      bellCtx.beginPath();
+      bellCtx.moveTo(cx1, cy);
+      bellCtx.lineTo(ax, ay);
+      bellCtx.strokeStyle = '#00f2fe';
+      bellCtx.lineWidth = 3;
+      bellCtx.stroke();
+      bellCtx.fillText(`Alice (${degA}°)`, cx1, cy + r + 16);
+
+      // Bob polarizer circle
+      bellCtx.beginPath();
+      bellCtx.arc(cx2, cy, r, 0, Math.PI * 2);
+      bellCtx.strokeStyle = 'rgba(157, 78, 221, 0.6)';
+      bellCtx.stroke();
+      const bx = cx2 + r * Math.cos((degB * Math.PI) / 180);
+      const by = cy - r * Math.sin((degB * Math.PI) / 180);
+      bellCtx.beginPath();
+      bellCtx.moveTo(cx2, cy);
+      bellCtx.lineTo(bx, by);
+      bellCtx.strokeStyle = '#9d4edd';
+      bellCtx.lineWidth = 3;
+      bellCtx.stroke();
+      bellCtx.fillText(`Bob (${degB}°)`, cx2, cy + r + 16);
+    }
+
+    if (angleASlider && angleBSlider) {
+      angleASlider.oninput = updateBell;
+      angleBSlider.oninput = updateBell;
+      updateBell();
+    }
+  }
+
+  // LAB 8: Cosmic Scales & Seth Lloyd Matrix
+  function initScalesLab() {
+    const scaleSlider = document.getElementById('scale-slider');
+    const nameVal = document.getElementById('scale-name-val');
+    const sizeVal = document.getElementById('scale-size-val');
+    const massVal = document.getElementById('scale-mass-val');
+    const bitsVal = document.getElementById('scale-bits-val');
+    const descVal = document.getElementById('scale-desc-val');
+
+    function updateScale() {
+      if (!scaleSlider || !window.PhysicsEngine.COSMIC_SCALES) return;
+      const idx = parseInt(scaleSlider.value, 10);
+      const item = window.PhysicsEngine.COSMIC_SCALES[idx];
+      if (!item) return;
+
+      if (nameVal) nameVal.textContent = `${idx + 1}. ${currentLang === 'tr' ? item.nameTr : item.nameEn}`;
+      if (sizeVal) sizeVal.textContent = `${window.PhysicsEngine.formatSciNum(item.sizeMeters)} m`;
+      if (massVal) massVal.textContent = `${window.PhysicsEngine.formatSciNum(item.massKg)} kg`;
+      if (bitsVal) bitsVal.textContent = `${window.PhysicsEngine.formatSciNum(item.bits)} bit`;
+      if (descVal) descVal.textContent = currentLang === 'tr' ? item.descTr : item.descEn;
+    }
+
+    if (scaleSlider) {
+      scaleSlider.oninput = updateScale;
+      updateScale();
+    }
+  }
+
+  // Initial App Render
   renderTimeline();
   renderComparisonMatrix();
+  renderGlossary();
   renderQuiz();
   initOrResumeLab('atom');
 });

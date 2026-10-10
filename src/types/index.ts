@@ -3,7 +3,7 @@ export type EraType = 'ancient' | 'classical' | 'quantum' | 'digital';
 export interface TimelineEvent {
   id: string;
   year: string;
-  yearNumber: number;
+  yearNumber?: number;
   era: EraType;
   title: string;
   titleEn: string;
@@ -18,47 +18,33 @@ export interface TimelineEvent {
   formula?: string;
   impact: string;
   impactEn: string;
-  category: 'philosophy' | 'classical-physics' | 'quantum-mechanics' | 'information-theory' | 'cosmology';
+  category?: 'philosophy' | 'classical-physics' | 'quantum-mechanics' | 'information-theory' | 'cosmology';
   tag: string;
 }
 
-export interface Article {
-  id: string;
-  title: string;
-  titleEn: string;
-  subtitle: string;
-  subtitleEn: string;
-  readTime: string;
-  era: EraType;
-  authorOrSchool: string;
-  summary: string;
-  summaryEn: string;
-  sections: {
-    heading: string;
-    headingEn: string;
-    content: string;
-    contentEn: string;
-    formula?: string;
-    callout?: string;
-    calloutEn?: string;
-  }[];
-  references: string[];
+export interface GlossaryItem {
+  term: string;
+  termEn: string;
+  category: 'ancient' | 'quantum' | 'information' | 'cosmology';
+  defTr: string;
+  defEn: string;
 }
 
 export interface ComparisonDimension {
   id: string;
   feature: string;
   featureEn: string;
-  matterView: string;
-  matterViewEn: string;
-  energyView: string;
-  energyViewEn: string;
-  informationView: string;
-  informationViewEn: string;
+  matter: string;
+  matterEn: string;
+  energy: string;
+  energyEn: string;
+  information: string;
+  informationEn: string;
 }
 
 export interface QuizQuestion {
   id: number;
+  category?: string;
   question: string;
   questionEn: string;
   options: {
@@ -68,5 +54,15 @@ export interface QuizQuestion {
   }[];
   explanation: string;
   explanationEn: string;
-  category: string;
+}
+
+export interface CosmicScaleItem {
+  id: string;
+  nameTr: string;
+  nameEn: string;
+  sizeMeters: number;
+  massKg: number;
+  bits: number;
+  descTr: string;
+  descEn: string;
 }

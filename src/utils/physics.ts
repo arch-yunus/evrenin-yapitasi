@@ -9,6 +9,7 @@ export const CONSTANTS = {
   mP: 2.176434e-8, // Planck mass (kg)
   tP: 5.391247e-44, // Planck time (s)
   solarMass: 1.98847e30, // Mass of Sun (kg)
+  eV: 1.602176634e-19, // Electronvolt (J)
 };
 
 /**
@@ -36,6 +37,7 @@ export function calculateBlackHoleEntropy(massKg: number): {
   planckPixels: number;
   hawkingTemperatureKelvin: number;
   evaporationTimeSeconds: number;
+  terabytes: number;
 } {
   const area = calculateEventHorizonArea(massKg);
   const planckArea = CONSTANTS.lP ** 2;
@@ -46,6 +48,7 @@ export function calculateBlackHoleEntropy(massKg: number): {
   
   // Information in bits (1 bit = ln(2) of entropy / k_B)
   const informationBits = entropyJoulesPerKelvin / (CONSTANTS.kB * Math.LN2);
+  const terabytes = informationBits / (8 * 1e12);
   
   // Hawking Temperature: T_H = hbar * c^3 / (8 * pi * G * M * k_B)
   const hawkingTemperatureKelvin = (CONSTANTS.hbar * (CONSTANTS.c ** 3)) / (8 * Math.PI * CONSTANTS.G * massKg * CONSTANTS.kB);
@@ -58,7 +61,8 @@ export function calculateBlackHoleEntropy(massKg: number): {
     informationBits,
     planckPixels,
     hawkingTemperatureKelvin,
-    evaporationTimeSeconds
+    evaporationTimeSeconds,
+    terabytes
   };
 }
 
@@ -74,16 +78,57 @@ export function calculateLandauerLimit(temperatureKelvin: number, bits: number =
  * Bostrom's Simulation Argument Trilemma:
  * P(Sim) = (f_p * N_I) / (f_p * N_I + 1)
  */
-export function calculateSimulationProbability(fp: number, NI: number): number {
-  if (fp === 0) return 0;
-  const numerator = fp * NI;
+export function calculateSimulationProbability(fp: number, NI: number, fi: number = 1.0): number {
+  if (fp <= 0 || NI <= 0) return 0;
+  const numerator = fp * NI * fi;
   const denominator = numerator + 1;
   return denominator === 0 ? 0 : numerator / denominator;
 }
 
 /**
+ * Margolus-Levitin Quantum Speed Limit
+ */
+export function calculateMargolusLevitinLimit(energyJoules: number): {
+  minDeltaTSeconds: number;
+  maxOperationsPerSecond: number;
+} {
+  const minDeltaTSeconds = (Math.PI * CONSTANTS.hbar) / (2 * energyJoules);
+  const maxOperationsPerSecond = (2 * energyJoules) / (Math.PI * CONSTANTS.hbar);
+  return { minDeltaTSeconds, maxOperationsPerSecond };
+}
+
+/**
+ * Quantum Entanglement Bell Correlation
+ */
+export function calculateBellCorrelation(thetaA: number, thetaB: number): number {
+  return -Math.cos(2 * (thetaA - thetaB));
+}
+
+/**
+ * CHSH Inequality Value
+ */
+export function calculateCHSH(a: number, aPrime: number, b: number, bPrime: number): {
+  E1: number;
+  E2: number;
+  E3: number;
+  E4: number;
+  S: number;
+  violatesLocalRealism: boolean;
+} {
+  const E1 = calculateBellCorrelation(a, b);
+  const E2 = calculateBellCorrelation(a, bPrime);
+  const E3 = calculateBellCorrelation(aPrime, b);
+  const E4 = calculateBellCorrelation(aPrime, bPrime);
+  const S = Math.abs(E1 - E2 + E3 + E4);
+  return {
+    E1, E2, E3, E4,
+    S,
+    violatesLocalRealism: S > 2.0
+  };
+}
+
+/**
  * 1D Elementary Cellular Automata Rule Evaluator
- * Evaluates binary neighborhood [left, center, right] according to 8-bit rule number (0..255)
  */
 export function evaluateWolframRule(rule: number, left: number, center: number, right: number): number {
   const index = (left << 2) | (center << 1) | right;
@@ -91,22 +136,7 @@ export function evaluateWolframRule(rule: number, left: number, center: number, 
 }
 
 /**
- * Generate next generation of 1D cellular automaton
- */
-export function stepWolfram1D(currentGen: number[], rule: number): number[] {
-  const len = currentGen.length;
-  const nextGen = new Array(len);
-  for (let i = 0; i < len; i++) {
-    const left = currentGen[(i - 1 + len) % len];
-    const center = currentGen[i];
-    const right = currentGen[(i + 1) % len];
-    nextGen[i] = evaluateWolframRule(rule, left, center, right);
-  }
-  return nextGen;
-}
-
-/**
- * Format numbers into compact readable scientific or standard notation
+ * Format numbers into compact readable scientific notation
  */
 export function formatScientific(num: number, digits: number = 2): string {
   if (num === 0) return "0";

@@ -1,4 +1,4 @@
-// Comprehensive Data Store for Evrenin Yapıtaşı
+// Comprehensive Data Store for Evrenin Yapıtaşı: Maddeden Yazılıma
 window.APP_DATA = {
   timeline: [
     {
@@ -20,6 +20,24 @@ window.APP_DATA = {
       tag: 'Arkhe: Su'
     },
     {
+      id: 'anaximander-apeiron',
+      year: 'MÖ ~560',
+      era: 'ancient',
+      title: 'Apeiron: Belirsiz ve Sonsuz İlk Töz',
+      titleEn: 'Apeiron: The Boundless and Indefinite Urstoff',
+      thinker: 'Anaksimandros',
+      summary: 'Arkhe somut bir element olamaz; çünkü zıtları üretebilmek için niteliksiz, sınırlandırılamaz ve sonsuz bir kaynak ("Apeiron") olmalıdır.',
+      summaryEn: 'Arche cannot be a concrete element; to generate all opposites, it must be an indefinite, boundless substratum (Apeiron).',
+      quote: 'Varlıkların ilkesi sonsuz-sınırsız olandır (Apeiron). Şeyler nereden doğarlarsa, zorunlu olarak oraya dönerler.',
+      quoteAuthor: 'Anaksimandros',
+      fullDescription: 'Anaksimandros, soyut bir ontolojik ilke öneren ilk filozoftur. Maddenin belirli hallerinin ötesinde "ham bir potansiyel" olduğunu sezmesi, modern kuantum vakumu ve simetri kırılması kavramlarının felsefi atasıdır.',
+      fullDescriptionEn: 'Anaximander was the first to propose an abstract, formless ontological reservoir from which all differentiated physical phenomena emerge.',
+      keyConcepts: ['Apeiron (Sınırsız/Belirsiz)', 'Kozmik Adalet', 'Simetri Kırılması Sezgisi'],
+      impact: 'Soyut ontolojik modellemenin ve kuantum vakumu benzeri kavramların habercisi oldu.',
+      impactEn: 'Prefigured modern concepts of primordial symmetry and the quantum vacuum state.',
+      tag: 'Arkhe: Apeiron'
+    },
+    {
       id: 'anaximenes-air',
       year: 'MÖ ~550',
       era: 'ancient',
@@ -36,6 +54,24 @@ window.APP_DATA = {
       impact: 'Maddenin niceliksel değişiminin niteliksel çeşitlilik doğurduğu fikrinin öncüsü.',
       impactEn: 'Pioneered the concept that quantitative spatial changes yield qualitative material properties.',
       tag: 'Arkhe: Hava'
+    },
+    {
+      id: 'pythagoras-numbers',
+      year: 'MÖ ~530',
+      era: 'ancient',
+      title: 'Her Şey Sayıdır: Evrenin Matematiksel Harmonisi',
+      titleEn: 'All is Number: The Mathematical Harmony of Cosmos',
+      thinker: 'Pythagoras (Pisagor Okulu)',
+      summary: 'Evrenin fiziksel tözü sayılar, oranlar ve geometrik harmoniden ibarettir.',
+      summaryEn: 'The true substance of cosmos is mathematical ratios, geometry, and numerical harmony.',
+      quote: 'Sayılar evreni yönetir. Bütün doğa matematiksel bir akort düzenindedir.',
+      quoteAuthor: 'Pythagoras',
+      fullDescription: 'Pisagorcular, müzik notalarındaki oranları (oktav, beşli) keşfederek fiziksel dünyanın görünmeyen matematiksel kurallarla dokunduğunu ilan ettiler. Bu, modern teorik fiziğin ve "evren bir matematiktir" tezinin kökenidir.',
+      fullDescriptionEn: 'The Pythagoreans revealed that reality is governed by numerical harmonic ratios, establishing the foundation of mathematical physics.',
+      keyConcepts: ['Matematiksel Ontoloji', 'Monad & Sayı', 'Kürelerin Harmonisi'],
+      impact: 'Max Tegmark\'ın Matematiksel Evren Hipotezi ve sicim teorisinin felsefi temelini oluşturdu.',
+      impactEn: 'Anticipated modern mathematical realism and algorithmic cosmology.',
+      tag: 'Matematiksel Arkhe'
     },
     {
       id: 'heraclitus-fire',
@@ -56,6 +92,24 @@ window.APP_DATA = {
       tag: 'Süreç & Logos'
     },
     {
+      id: 'parmenides-being',
+      year: 'MÖ ~480',
+      era: 'ancient',
+      title: 'Varlık Birdir: Değişimin ve Boşluğun İllüzyonu',
+      titleEn: 'Being is One: The Illusion of Change and Nothingness',
+      thinker: 'Parmenides & Zenon',
+      summary: 'Varlık yaratılmamıştır ve yok edilemez; boşluk var olamaz, dolayısıyla hareket ve çokluk mantıksal bir yanılsamadır.',
+      summaryEn: 'Being is uncreated, indestructible and indivisible; non-being cannot exist, rendering change illusory.',
+      quote: 'Varlık vardır, var olmayan ise var olamaz. Düşünmek ile olmak aynı şeydir.',
+      quoteAuthor: 'Parmenides',
+      fullDescription: 'Parmenides, değişimin mantıksal imkansızlığını savunarak Einstein\'ın 4 boyutlu "Blok Evren" (uzay-zamanın geçmiş, şimdi ve geleceğinin bir arada var olduğu) modelinin ilk tohumlarını atmıştır.',
+      fullDescriptionEn: 'Parmenides presented the first strict rationalist ontology, anticipating the modern 4D Block Universe where all spacetime co-exists.',
+      keyConcepts: ['Varlık Birliği (Elea Okulu)', 'Blok Evren Sezgisi', 'Zenon Paradoksları'],
+      impact: 'Fiziğin korunum yasalarına ve uzay-zamanın statik geometri yorumuna ilham verdi.',
+      impactEn: 'Underpinned physical conservation principles and block spacetime cosmology.',
+      tag: 'Elea & Blok Evren'
+    },
+    {
       id: 'democritus-atom',
       year: 'MÖ ~420',
       era: 'ancient',
@@ -72,6 +126,24 @@ window.APP_DATA = {
       impact: 'Modern atom teorisi ve kimyasal elementler tablosunun felsefi temelini oluşturdu.',
       impactEn: 'Founded the mechanistic materialist framework that underpinned classical physics.',
       tag: 'Atomos Hipotezi'
+    },
+    {
+      id: 'aristotle-hylomorphism',
+      year: 'MÖ ~350',
+      era: 'ancient',
+      title: 'Madde ve Form (Hilomorfizm) ile 5. Element Esir',
+      titleEn: 'Matter and Form (Hylomorphism) and the Quintessence Aether',
+      thinker: 'Aristoteles',
+      summary: 'Saf madde şekilsiz bir potansiyeldir; ona kimliğini veren "Form"dur. Gökler ise 5. element Esir (Quintessence) ile doludur.',
+      summaryEn: 'Prime matter is formless potency; "Form" provides actuality. Celestial realms consist of the 5th element, Aether.',
+      quote: 'Bütün, parçaların toplamından fazladır.',
+      quoteAuthor: 'Aristoteles',
+      fullDescription: 'Aristoteles\'in madde-form ayrımı, modern donanım (madde) ve yazılım (form) kavramının en eski felsefi karşılığıdır. Maddesiz form bilginin kendisine, formsuz madde ise işlenmemiş bit havuzuna benzer.',
+      fullDescriptionEn: 'Aristotle\'s hylomorphism prefigures hardware (matter) and software/information (form) distinction in computing architecture.',
+      keyConcepts: ['Hyle (Madde) & Morphe (Form)', 'Potansiyel vs Aktüel', 'Esir (Aether)'],
+      impact: 'Skolastik felsefeyi ve ortaçağ bilimini 2000 yıl boyunca yönetti.',
+      impactEn: 'Dominated natural philosophy and scholastic thought for two millennia.',
+      tag: 'Hilomorfizm'
     },
     {
       id: 'newton-mechanics',
@@ -112,6 +184,25 @@ window.APP_DATA = {
       tag: 'Alan Kuramı'
     },
     {
+      id: 'boltzmann-entropy',
+      year: '1877',
+      era: 'classical',
+      title: 'İstatiksel Mekanik ve Entropi (S = k log W)',
+      titleEn: 'Statistical Mechanics and Thermodynamic Entropy (S = k log W)',
+      thinker: 'Ludwig Boltzmann',
+      summary: 'Termodinamik entropiyi parçacıkların mikro-durum olasılıklarıyla (W) ilişkilendirerek bilginin eksikliğini formüle etti.',
+      summaryEn: 'Linked thermodynamic entropy to the microscopic multiplicity of states (W), prefiguring information entropy.',
+      quote: 'Entropi, bir sistem hakkında sahip olmadığımız mikroskobik bilginin ölçüsüdür.',
+      quoteAuthor: 'Ludwig Boltzmann',
+      fullDescription: 'Boltzmann, bir gazın sıcaklık ve basıncının trilyonlarca atomun istatistiksel dağılımından doğduğunu gösterdi. Entropi formülü, 70 yıl sonra Shannon\'ın bilgi entropisi formülüne birebir model oldu.',
+      fullDescriptionEn: 'Boltzmann established statistical thermodynamics: entropy measures microstate configurations, setting the stage for Shannon\'s information formula.',
+      keyConcepts: ['İstatistiksel Mekanik', 'Mikro-durumlar (W)', 'Zamanın Oku'],
+      formula: 'S = k_B \\ln W',
+      impact: 'Enformasyon teorisi ile termodinamik arasındaki kopmaz bağı inşa etti.',
+      impactEn: 'Bridged physical thermodynamics and information theory.',
+      tag: 'İstatistiksel Entropi'
+    },
+    {
       id: 'planck-quantum',
       year: '1900',
       era: 'quantum',
@@ -132,22 +223,22 @@ window.APP_DATA = {
     },
     {
       id: 'einstein-emc2',
-      year: '1905',
+      year: '1905-1915',
       era: 'quantum',
-      title: 'E=mc²: Madde ile Enerjinin Kusursuz Eşdeğerliği',
-      titleEn: 'E=mc²: The Complete Equivalence of Mass and Energy',
+      title: 'E=mc² ve Genel Görelilik: Enerji ve Uzay-Zaman Geometrisi',
+      titleEn: 'E=mc² and General Relativity: Energy and Spacetime Geometry',
       thinker: 'Albert Einstein',
-      summary: 'Maddenin aslında son derece yoğunlaşmış bir enerji formu olduğunu kanıtladı.',
-      summaryEn: 'Proved that mass is simply ultra-concentrated energy.',
+      summary: 'Maddenin yoğunlaşmış enerji olduğunu ve uzay-zaman dokusunun enerjiyle büküldüğünü kanıtladı.',
+      summaryEn: 'Proved mass is concentrated energy and spacetime is a dynamic fabric curved by mass-energy tensor.',
       quote: 'Madde, duyularımızla algılanabilecek kadar yoğunlaşmış enerjiden başka bir şey değildir.',
       quoteAuthor: 'Albert Einstein',
-      fullDescription: 'Özel Görelilik kuramının en çarpıcı sonucu, kütle (m) ile enerjinin (E) birbirine dönüşebilen aynı fiziksel gerçeklik olduğunu göstermesidir. "Madde mi, Enerji mi?" sorusunun cevabı "İkisi aynı şeydir" oldu.',
-      fullDescriptionEn: 'Einstein demonstrated that mass is confined energy. Mass and energy conservation unified into a single law.',
-      keyConcepts: ['Kütle-Enerji Eşdeğerliği', 'Işık Hızı Sınırı', 'Kozmik Enerji'],
-      formula: 'E = m c^2',
-      impact: 'Nükleer enerji, yıldızların parlamasının anlaşılması ve modern parçacık fiziği doğdu.',
-      impactEn: 'Enabled nuclear physics and explained stellar fusion.',
-      tag: 'E=mc² Eşdeğerliği'
+      fullDescription: 'Einstein kütle ve enerjiyi birleştirdi; ardından Genel Görelilik ile yerçekiminin bir kuvvet değil, uzay-zaman geometrisinin eğriliği olduğunu gösterdi ($G_{\\mu\\nu} = \\frac{8\\pi G}{c^4} T_{\\mu\\nu}$).',
+      fullDescriptionEn: 'Einstein revolutionized physics twice: unifying mass-energy ($E=mc^2$) and framing gravitation as dynamic spacetime curvature.',
+      keyConcepts: ['Kütle-Enerji Eşdeğerliği', 'Uzay-Zaman Eğriliği', 'Işık Hızı Değişmezi'],
+      formula: 'E = m c^2 \\quad \\& \\quad G_{\\mu\\nu} = \\frac{8\\pi G}{c^4} T_{\\mu\\nu}',
+      impact: 'Nükleer enerji, kozmoloji, kara delik fiziği ve GPS sistemleri doğdu.',
+      impactEn: 'Founded relativistic astrophysics, cosmology, and modern spacetime ontology.',
+      tag: 'Görelilik & E=mc²'
     },
     {
       id: 'heisenberg-schrodinger',
@@ -163,7 +254,7 @@ window.APP_DATA = {
       fullDescription: 'Schrödinger denklemi ve Heisenberg belirsizlik ilkesi, parçacıkların ölçülmeden önce "süperpozisyon" halinde olasılık dalgası olarak var olduğunu, gözlemcinin ölçümüyle durumun çöktüğünü ortaya koydu.',
       fullDescriptionEn: 'Quantum mechanics establishes that before measurement, a quantum system exists in a superposition of states.',
       keyConcepts: ['Dalga Fonksiyonu (Ψ)', 'Belirsizlik İlkesi', 'Süperpozisyon'],
-      formula: 'Δx · Δp ≥ ℏ / 2',
+      formula: 'Δx · Δp ≥ ℏ / 2 \\quad \\& \\quad i\\hbar \\frac{\\partial}{\\partial t} \\Psi = \\hat{H}\\Psi',
       impact: 'Determinizm yıkıldı; nesnel gerçeklik yerine enformasyonel olasılıklar bilimin merkezine oturdu.',
       impactEn: 'Replaced classical determinism with probabilistic realism.',
       tag: 'Kuantum Belirsizliği'
@@ -187,6 +278,24 @@ window.APP_DATA = {
       tag: 'Standart Model & QFT'
     },
     {
+      id: 'turing-computation',
+      year: '1936',
+      era: 'digital',
+      title: 'Evrensel Turing Makinesi: Algoritmik Evrenin Doğuşu',
+      titleEn: 'Universal Turing Machine: Dawn of Algorithmic Reality',
+      thinker: 'Alan Turing',
+      summary: 'Hesaplanabilirlik sınırlarını belirleyen ve her türlü mantıksal süreci simüle edebilen evrensel makine modelini kurdu.',
+      summaryEn: 'Defined mathematical computability and proved that universal algorithmic machines can simulate any computational process.',
+      quote: 'Bir makinenin düşünebileceği ve doğadaki tüm süreçlerin simüle edilebileceği fikri matematiksel bir gerçektir.',
+      quoteAuthor: 'Alan Turing',
+      fullDescription: 'Turing, Church-Turing teziyle herhangi bir fiziksel sürecin algoritmik bir adımla taklit edilebileceği fikrinin önünü açtı. Evrenin kendisinin bir hesaplama aygıtı olarak görülmesinin ilk kuramsal motorudur.',
+      fullDescriptionEn: 'Turing formalised algorithmic computation, laying the foundation for theoretical computer science and digital physics.',
+      keyConcepts: ['Turing Makinesi', 'Hesaplanabilirlik', 'Algoritma'],
+      impact: 'Bilgisayar bilimini başlattı ve dijital ontolojinin matematiksel temelini attı.',
+      impactEn: 'Founded computer science and algorithmic information models.',
+      tag: 'Turing & Hesaplama'
+    },
+    {
       id: 'shannon-info',
       year: '1948',
       era: 'digital',
@@ -200,7 +309,7 @@ window.APP_DATA = {
       fullDescription: 'Shannon, bilginin anlamından bağımsız olarak matematiksel bir varlık olduğunu gösterdi. Shannon entropisi formülü, Boltzmann termodinamik entropisi ile tamı tamına aynı yapıdaydı.',
       fullDescriptionEn: 'Shannon formalized information entropy, revealing that information is a physical quantity governed by logarithmic probability distributions.',
       keyConcepts: ['Bit (İkili Basamak)', 'Shannon Entropisi', 'Kanal Kapasitesi'],
-      formula: 'H(X) = -∑ P(x_i) log₂ P(x_i)',
+      formula: 'H(X) = -\\sum P(x_i) \\log_2 P(x_i)',
       impact: 'Tüm dijital çağ, bilgisayarlar ve dijital fiziğin temelleri kuruldu.',
       impactEn: 'Ignited the digital revolution, computing, telecommunications, and digital physics.',
       tag: 'Bilgi Teorisi'
@@ -219,7 +328,7 @@ window.APP_DATA = {
       fullDescription: 'Landauer, bilgisayar mantık kapılarındaki bilgi silinmesinin termodinamik bir bedeli olduğunu gösterdi. Bu kanunla bilginin kütle ve enerji gibi evrenin fiziksel bir yapıtaşı olduğu tescillendi.',
       fullDescriptionEn: 'Landauer proved that information processing is bound by thermodynamics. Information cannot be erased without thermodynamic heat dissipation.',
       keyConcepts: ['Bilgi Fizikseldir', 'Landauer Enerji Sınırı', 'Tersinir Hesaplama'],
-      formula: 'E_min ≥ k_B T ln 2',
+      formula: 'E_{\\text{min}} \\ge k_B T \\ln 2',
       impact: 'Maxwell\'in İblisi paradoksunu çözdü; kuantum ve nanobilgisayarların sınırını çizdi.',
       impactEn: 'Resolved Maxwell\'s Demon paradox and set limits for nanotechnological computation.',
       tag: 'Landauer Sınırı'
@@ -256,7 +365,7 @@ window.APP_DATA = {
       fullDescription: 'Maksimum bilgi depolama kapasitesi hacimle değil, yüzey alanı ile sınırlıdır. Her 4 Planck alanı tam 1 bitlik bilgi taşır. Bu keşif Holografik İlkenin temelini oluşturdu.',
       fullDescriptionEn: 'Demonstrated that maximum theoretical entropy is bounded by boundary area, establishing a universal Planckian information limit.',
       keyConcepts: ['Olay Ufku', 'Planck Alanı', 'Bekenstein Sınırı'],
-      formula: 'S_BH = (k_B c^3 A) / (4 G ℏ) = (k_B A) / (4 ℓ_P^2)',
+      formula: 'S_{BH} = \\frac{k_B c^3 A}{4 G \\hbar} = \\frac{k_B A}{4 \\ell_P^2}',
       impact: 'Holografik İlke ve kuantum yerçekimi teorilerinin anahtar denklemi oldu.',
       impactEn: 'Became the central formula uniting quantum mechanics, general relativity, and information.',
       tag: 'Kara Delik Entropisi'
@@ -280,6 +389,24 @@ window.APP_DATA = {
       tag: 'It From Bit'
     },
     {
+      id: 'maldacena-holography',
+      year: '1997',
+      era: 'digital',
+      title: 'AdS/CFT Uyuşumu ve Holografik Evren',
+      titleEn: 'AdS/CFT Correspondence and the Holographic Universe',
+      thinker: 'Juan Maldacena, 't Hooft, Susskind',
+      summary: 'Yerçekimli (D+1) boyutlu bir evren, sınırındaki yerçekimsiz D boyutlu bir kuantum bilgi teorisine tam olarak denktir.',
+      summaryEn: 'A gravitational (D+1)-dimensional universe is mathematically dual to a boundary D-dimensional quantum field theory.',
+      quote: '3 boyutlu uzay ve yerçekimi, 2 boyutlu sınır yüzeyindeki kuantum dolanıklık desenlerinin holografik bir izdüşümüdür.',
+      quoteAuthor: 'Juan Maldacena',
+      fullDescription: 'Maldacena\'nın AdS/CFT ikiliği, uzay-zamanın kendisinin temel olmadığını, sınır yüzeyindeki kuantum enformasyonunun (qubitler arasındaki dolanıklık ağlarının) bir hologramı olarak "türediğini" (emergent spacetime) ispatladı.',
+      fullDescriptionEn: 'Proved mathematically that spacetime geometry and gravity emerge holographically from boundary quantum entanglement.',
+      keyConcepts: ['AdS/CFT İkiliği', 'Holografik İlke', 'Türeyen Uzayzaman (Emergence)'],
+      impact: 'Modern kuantum yerçekimi ve ER=EPR teorisinin ana ekseni haline geldi.',
+      impactEn: 'Revolutionized theoretical physics, quantum gravity, and string theory.',
+      tag: 'Holografik İkilik'
+    },
+    {
       id: 'bostrom-simulation',
       year: '2003',
       era: 'digital',
@@ -293,7 +420,7 @@ window.APP_DATA = {
       fullDescription: 'Bostrom, bir üst uygarlığın devasa hesaplama kapasitesiyle (Matruşka beyni) trilyonlarca atalar simülasyonu çalıştırabileceğini; dolayısıyla rastgele bir bilincin simülasyonda olma olasılığının 1\'e yakın olduğunu gösterdi.',
       fullDescriptionEn: 'Bostrom proved mathematically that biological ancestral reality is vanishingly improbable compared to substrate-independent simulated consciousness.',
       keyConcepts: ['Simülasyon Trilemması', 'Substrat Bağımsızlığı', 'Matruşka Beyni'],
-      formula: 'P(Sim) = (f_p N_I) / (f_p N_I + 1)',
+      formula: 'P(\\text{Sim}) = \\frac{f_p N_I}{f_p N_I + 1}',
       impact: 'Modern felsefe ve astrofiziğin en popüler tartışma konularından biri oldu.',
       impactEn: 'Sparked global ontological inquiries into the simulated nature of reality.',
       tag: 'Simülasyon Hipotezi'
@@ -312,7 +439,7 @@ window.APP_DATA = {
       fullDescription: 'Seth Lloyd, kuantum mekaniğindeki her etkileşimin bir mantık kapısı olduğunu gösterdi. İki parçacık çarpıştığında durumları değişir; yani evren durmaksızın kendi geleceğini hesaplar.',
       fullDescriptionEn: 'Lloyd demonstrated that every physical collision and transition is a quantum logic operation; physics is nature computing itself.',
       keyConcepts: ['Kozmik Kuantum Bilgisayarı', 'Margolus-Levitin Sınırı', '10^122 İşlem'],
-      formula: 'N_op ≈ (2 E_univ t) / (π ℏ) ~ 10^122 ops',
+      formula: 'N_{op} \\approx \\frac{2 E_{\\text{univ}} t}{\\pi \\hbar} \\sim 10^{122} \\text{ ops}',
       impact: 'Fiziksel kanunları hesaplama algoritmalarıyla doğrudan özdeşleştirdi.',
       impactEn: 'Equated physical interaction directly with quantum computation.',
       tag: 'Evrensel Kuantum İşlemci'
@@ -333,14 +460,14 @@ window.APP_DATA = {
     },
     {
       id: 'c2',
-      feature: 'Temel Birim',
-      featureEn: 'Fundamental Unit',
-      matter: 'Kütle (Kilogram / Dalton)',
-      matterEn: 'Mass (Kilogram / Dalton)',
-      energy: 'Kuantum / Joule (E = hν)',
-      energyEn: 'Quantum / Joule (E = hν)',
-      information: 'Bit (0/1) / Qubit (|0⟩, |1⟩)',
-      informationEn: 'Bit (0/1) / Qubit (|0⟩, |1⟩)'
+      feature: 'Temel Birim ve Kuantum',
+      featureEn: 'Fundamental Unit & Quantum',
+      matter: 'Kütle (Kilogram / Dalton / Mol)',
+      matterEn: 'Mass (Kilogram / Dalton / Mole)',
+      energy: 'Kuantum / Joule (E = hν = ℏω)',
+      energyEn: 'Quantum / Joule (E = hν = ℏω)',
+      information: 'Bit (0/1) / Qubit (|0⟩, |1⟩ / Süperpozisyon)',
+      informationEn: 'Bit (0/1) / Qubit (|0⟩, |1⟩ / Superposition)'
     },
     {
       id: 'c3',
@@ -350,8 +477,8 @@ window.APP_DATA = {
       matterEn: 'Conservation of Mass (Lavoisier)',
       energy: 'Enerjinin Korunumu (Termodinamik 1. Yasa, E=mc²)',
       energyEn: 'Conservation of Energy (1st Law, E=mc²)',
-      information: 'Kuantum Bilgisinin Korunumu (Üniterlik Yasası)',
-      informationEn: 'Conservation of Quantum Information (Unitarity)'
+      information: 'Kuantum Bilgisinin Korunumu (Üniterlik Yasası - No Hiding)',
+      informationEn: 'Conservation of Quantum Information (Unitarity Principle)'
     },
     {
       id: 'c4',
@@ -361,8 +488,8 @@ window.APP_DATA = {
       matterEn: 'Fixed, absolute 3D background arena (Newton)',
       energy: 'Kütle-enerjiyle bükülen dinamik 4D uzayzaman manifoldu (Einstein)',
       energyEn: 'Dynamic 4D spacetime continuum curved by energy (Einstein)',
-      information: 'Kuantum dolanıklık ağlarından ve kodlarından türeyen bir hologram (AdS/CFT)',
-      informationEn: 'Emergent holographic projection from quantum entanglement networks (AdS/CFT)'
+      information: 'Kuantum dolanıklık ağlarından türeyen holografik matris (AdS/CFT)',
+      informationEn: 'Emergent holographic geometry from entanglement networks (AdS/CFT)'
     },
     {
       id: 'c5',
@@ -377,20 +504,43 @@ window.APP_DATA = {
     },
     {
       id: 'c6',
+      feature: 'Maksimum Hız & İşlem Sınırı',
+      featureEn: 'Maximum Speed & Op Limit',
+      matter: 'Sonlu mekanik hızlar, anlık etki varsayımı',
+      matterEn: 'Finite mechanical speeds, instantaneous action assumed',
+      energy: 'Vakumda ışık hızı c (299,792,458 m/s)',
+      energyEn: 'Speed of light in vacuum c (299,792,458 m/s)',
+      information: 'Margolus-Levitin Sınırı: R_max = 2E / (π ℏ) ops/sec',
+      informationEn: 'Margolus-Levitin Limit: R_max = 2E / (π ℏ) ops/sec'
+    },
+    {
+      id: 'c7',
+      feature: 'Gözlemcinin Rolü',
+      featureEn: 'Role of Observer',
+      matter: 'Dışsal ve etkisiz; nesnel dünya bağımsızdır',
+      matterEn: 'Passive and external; objective reality is spectator-independent',
+      energy: 'Referans çerçevesine bağlı (Göreli zaman/uzunluk)',
+      energyEn: 'Frame-dependent (Relativistic time dilation and Lorentz contraction)',
+      information: 'Aktif katılımcı; ölçüm dalga fonksiyonunu çökerterek biti üretir',
+      informationEn: 'Active participant; measurement collapses wavefunction into classical bit'
+    },
+    {
+      id: 'c8',
       feature: 'Öncü Fizikçiler / Düşünürler',
       featureEn: 'Pioneering Thinkers',
       matter: 'Demokritos, Dalton, Newton, Lavoisier',
       matterEn: 'Democritus, Dalton, Newton, Lavoisier',
       energy: 'Maxwell, Planck, Einstein, Heisenberg, Feynman, Higgs',
       energyEn: 'Maxwell, Planck, Einstein, Heisenberg, Feynman, Higgs',
-      information: 'Shannon, Landauer, Wheeler, Zuse, Bekenstein, Lloyd, Bostrom, Wolfram',
-      informationEn: 'Shannon, Landauer, Wheeler, Zuse, Bekenstein, Lloyd, Bostrom, Wolfram'
+      information: 'Shannon, Landauer, Wheeler, Zuse, Bekenstein, Lloyd, Bostrom, Maldacena',
+      informationEn: 'Shannon, Landauer, Wheeler, Zuse, Bekenstein, Lloyd, Bostrom, Maldacena'
     }
   ],
 
   quiz: [
     {
       id: 1,
+      category: 'Dijital Fizik',
       question: 'John Archibald Wheeler\'ın meşhur "It from Bit" felsefesi neyi savunur?',
       questionEn: 'What does John Archibald Wheeler\'s famous "It from Bit" philosophy assert?',
       options: [
@@ -404,6 +554,7 @@ window.APP_DATA = {
     },
     {
       id: 2,
+      category: 'Termodinamik & Bilgi',
       question: 'Landauer İlkesi\'ne göre oda sıcaklığında 1 bitlik bilginin silinmesi neden enerji harcar?',
       questionEn: 'According to Landauer\'s Principle, why does erasing 1 bit of information dissipate heat?',
       options: [
@@ -417,6 +568,7 @@ window.APP_DATA = {
     },
     {
       id: 3,
+      category: 'Kara Delikler & Holografi',
       question: 'Bekenstein-Hawking formülüne göre bir kara deliğin bilgi depolama kapasitesi ne ile orantılıdır?',
       questionEn: 'According to the Bekenstein-Hawking formula, what does the information capacity of a black hole scale with?',
       options: [
@@ -430,6 +582,7 @@ window.APP_DATA = {
     },
     {
       id: 4,
+      category: 'Modern Fizik',
       question: 'Einstein\'ın meşhur E = mc² denkleminin ontolojik sonucu nedir?',
       questionEn: 'What is the primary ontological consequence of Einstein\'s E = mc²?',
       options: [
@@ -443,6 +596,7 @@ window.APP_DATA = {
     },
     {
       id: 5,
+      category: 'Simülasyon Kuramı',
       question: 'Nick Bostrom\'un Simülasyon Argümanı\'na göre (Trilemma), eğer gelişmiş uygarlıklar çok sayıda atalar simülasyonu çalıştırıyorsa ne geçerlidir?',
       questionEn: 'According to Nick Bostrom\'s Simulation Argument (Trilemma), if advanced civilizations run abundant ancestor simulations, what follows?',
       options: [
@@ -453,6 +607,205 @@ window.APP_DATA = {
       ],
       explanation: 'Bostrom, simüle edilen sanal bilinç sayısı organik olanlardan katrilyonlarca kat fazla olacağından, rastgele seçilen bir bilincin (bizim) simülasyonda olma olasılığının 1\'e yakın olduğunu göstermiştir.',
       explanationEn: 'Since simulated minds would exponentially outnumber biological minds, a randomly chosen observer is overwhelmingly likely to be in a simulation.'
+    },
+    {
+      id: 6,
+      category: 'Kozmoloji & Kuantum',
+      question: 'Seth Lloyd\'un hesaplamalarına göre evren Büyük Patlamadan bu yana yaklaşık kaç kuantum işlemi gerçekleştirmiştir?',
+      questionEn: 'According to Seth Lloyd\'s calculations, approximately how many quantum logic operations has the universe executed since the Big Bang?',
+      options: [
+        { text: '~ 10^122 Kuantum İşlemi', textEn: '~ 10^122 Quantum Operations', isCorrect: true },
+        { text: '~ 10^50 Kuantum İşlemi', textEn: '~ 10^50 Quantum Operations', isCorrect: false },
+        { text: '~ 10^500 Kuantum İşlemi', textEn: '~ 10^500 Quantum Operations', isCorrect: false },
+        { text: '~ 10^20 Kuantum İşlemi', textEn: '~ 10^20 Quantum Operations', isCorrect: false }
+      ],
+      explanation: 'Margolus-Levitin kuantum hız sınırı ve kozmolojik enerji-zaman integraline göre evren bugüne kadar yaklaşık 10^122 mantıksal işlem yapmıştır ve 10^92 bit bilgi barındırır.',
+      explanationEn: 'Based on the Margolus-Levitin bound applied to the cosmological mass-energy budget, the universe has performed ~10^122 ops on ~10^92 bits.'
+    },
+    {
+      id: 7,
+      category: 'Kuantum Dolanıklık',
+      question: 'Bell Eşitsizliği ihlali (Aspect, Clauser, Zeilinger deneyleri) doğa hakkında neyi ispatlamıştır?',
+      questionEn: 'What did the violation of Bell\'s Inequality (experiments by Aspect, Clauser, Zeilinger) prove about nature?',
+      options: [
+        { text: 'Yerel gerçekçilik (Local Realism) yanlıştır; kuantum dolanıklık yerel gizli değişkenlerle açıklanamaz.', textEn: 'Local realism is false; quantum entanglement cannot be explained by local hidden variables.', isCorrect: true },
+        { text: 'Işık hızı aşılarak anlık kütle transferi yapılabilir.', textEn: 'Mass can be instantly transferred faster than light.', isCorrect: false },
+        { text: 'Kuantum fiziği tamamen deterministtir.', textEn: 'Quantum physics is completely deterministic.', isCorrect: false },
+        { text: 'Elektronlar kütlesizdir.', textEn: 'Electrons have zero mass.', isCorrect: false }
+      ],
+      explanation: 'Bell testi deneyleri, doğanın "yerel gerçekçi" olmadığını; kuantum durumlarının uzamsal mesafelerden bağımsız bir enformasyonel bütünlük sergilediğini kanıtlamıştır (2022 Nobel Fizik Ödülü).',
+      explanationEn: 'Bell test experiments proved nature violates local realism, demonstrating non-local quantum correlations.'
+    },
+    {
+      id: 8,
+      category: 'Antik Felsefe',
+      question: 'Anaksimandros\'un her şeyin kökeni olarak önerdiği "Apeiron" kavramı ne anlama gelir?',
+      questionEn: 'What does Anaximander\'s "Apeiron" concept signify as the primal Arche?',
+      options: [
+        { text: 'Sınırsız, belirsiz ve sonsuz ham potansiyel töz', textEn: 'The boundless, indefinite and infinite primal reservoir', isCorrect: true },
+        { text: 'Kaynayan sıcak su', textEn: 'Boiling hot water', isCorrect: false },
+        { text: 'Katı altın parçacıkları', textEn: 'Solid gold particles', isCorrect: false },
+        { text: 'Görünmez hava akımları', textEn: 'Invisible air streams', isCorrect: false }
+      ],
+      explanation: 'Anaksimandros, somut bir element (su, ateş vb.) yerine zıtlıkların henüz ayrışmadığı soyut, sonsuz ve şekilsiz bir kaynak olan Apeiron\'u öne sürmüştür.',
+      explanationEn: 'Anaximander posited Apeiron as an infinite, unconditioned substrate prior to all physical differentiation.'
+    },
+    {
+      id: 9,
+      category: 'Hücresel Otomat',
+      question: 'Stephen Wolfram\'ın Kural 110 (Rule 110) hücresel otomatının en çarpıcı özelliği nedir?',
+      questionEn: 'What is the most remarkable mathematical property of Stephen Wolfram\'s Rule 110 cellular automaton?',
+      options: [
+        { text: 'Evrensel Turing Tam olması (her türlü bilgisayar programını çalıştırabilmesi)', textEn: 'It is Turing Complete (capable of universal computation)', isCorrect: true },
+        { text: 'Sadece 3 adım sonra tamamen sıfırlanması', textEn: 'It dies out into zeros in just 3 steps', isCorrect: false },
+        { text: 'Kütleçekim kuvvetini sıfıra indirmesi', textEn: 'It cancels gravitational fields', isCorrect: false },
+        { text: 'Yalnızca asal sayıları üretmesi', textEn: 'It generates exclusively prime numbers', isCorrect: false }
+      ],
+      explanation: 'Matthew Cook 2004\'te Kural 110\'un Evrensel Turing Tam olduğunu kanıtlamıştır. Bu, en basit 1D deterministik kuralların bile evrendeki tüm karmaşık hesaplamaları üretebileceğini gösterir.',
+      explanationEn: 'Rule 110 was proven Turing-complete, showing that simple elementary rules can support universal computation.'
+    },
+    {
+      id: 10,
+      category: 'Kuantum Bilgisi',
+      question: 'Kuantum bilgisinde "Klonlanamazlık Teoremi" (No-Cloning Theorem) neyi ifade eder?',
+      questionEn: 'What does the No-Cloning Theorem state in quantum information theory?',
+      options: [
+        { text: 'Bilinmeyen rastgele bir kuantum durumunun mükemmel bir kopyası yaratılamaz.', textEn: 'An unknown quantum state cannot be cloned with perfect fidelity.', isCorrect: true },
+        { text: 'Kuantum bilgisayarları asla çoğaltılamaz.', textEn: 'Quantum computers cannot be manufactured.', isCorrect: false },
+        { text: 'Fotonlar asla bölünemez.', textEn: 'Photons can never be split.', isCorrect: false },
+        { text: 'Bilgisayar virüsleri kuantuma bulaşamaz.', textEn: 'Computer viruses cannot affect quantum code.', isCorrect: false }
+      ],
+      explanation: 'Wootters ve Zurek (1982) tarafından ispatlanan Klonlanamazlık Teoremi, kuantum mekaniğindeki üniterlik yasasının bir sonucudur; kuantum bilgisinin benzersizliğini ve kuantum kriptografisinin (QKD) güvenliğini garanti eder.',
+      explanationEn: 'The No-Cloning theorem ensures that arbitrary unknown quantum superposition states cannot be duplicated, securing quantum cryptography.'
+    }
+  ],
+
+  glossary: [
+    {
+      term: 'Arkhe (Arche)',
+      termEn: 'Arche',
+      category: 'ancient',
+      defTr: 'Antik Yunan doğa felsefesinde tüm varlıkların kendisinden türediği ilk ilke, temel töz veya yapıtaşı.',
+      defEn: 'In ancient Greek philosophy, the primordial source, first principle, or fundamental substance of reality.'
+    },
+    {
+      term: 'Apeiron',
+      termEn: 'Apeiron',
+      category: 'ancient',
+      defTr: 'Anaksimandros tarafından önerilen; sınırları olmayan, belirsiz, sonsuz ve tüm zıtlıkların potansiyelini barındıran ilk töz.',
+      defEn: 'Anaximander\'s concept of the boundless, indefinite, and infinite primal substance preceding all physical forms.'
+    },
+    {
+      term: 'Atomos',
+      termEn: 'Atomos',
+      category: 'ancient',
+      defTr: 'Demokritos\'un ortaya attığı "bölünemez, parçalanamaz" anlamına gelen, maddenin temel yapıtaşı hipotezi.',
+      defEn: 'Democritus\'s hypothesis of indivisible, immutable fundamental geometric building blocks of matter.'
+    },
+    {
+      term: 'Logos',
+      termEn: 'Logos',
+      category: 'ancient',
+      defTr: 'Herakleitos\'a göre evrendeki sürekli değişimi (ateş) yöneten akıl, evrensel yasa ve düzenleyici kozmik algoritma.',
+      defEn: 'The universal principle, cosmic algorithm, and rational order regulating eternal flux and transformation.'
+    },
+    {
+      term: 'Hilomorfizm (Hylomorphism)',
+      termEn: 'Hylomorphism',
+      category: 'ancient',
+      defTr: 'Aristoteles\'in her fiziksel varlığın şekilsiz ham madde (Hyle) ve ona kimlik kazandıran formdan (Morphe) oluştuğunu savunan öğretisi.',
+      defEn: 'Aristotle\'s ontology asserting that physical entities are compounds of prime matter (hyle) and structuring form (morphe).'
+    },
+    {
+      term: 'Planck Ölçeği (Planck Scale)',
+      termEn: 'Planck Scale',
+      category: 'quantum',
+      defTr: 'Uzay-zamanın piksellendiği ve klasik geometrinin kuantum köpüğüne dönüştüğü asgari fiziksel sınır (Uzunluk: ~1.616×10⁻³⁵ m, Zaman: ~5.39×10⁻⁴⁴ s).',
+      defEn: 'The minimum physical resolution limit where classical spacetime dissolves into quantum foam (1.616×10⁻³⁵ m).'
+    },
+    {
+      term: 'Kuantum Dolanıklığı (Entanglement)',
+      termEn: 'Quantum Entanglement',
+      category: 'quantum',
+      defTr: 'İki veya daha fazla parçacığın, aralarında ışık yılları olsa dahi tek bir kuantum dalga fonksiyonunu paylaştığı fiziksel olgu.',
+      defEn: 'Phenomenon where quantum states of multi-particle systems remain instantaneously interdependent across arbitrary distances.'
+    },
+    {
+      term: 'Süperpozisyon (Superposition)',
+      termEn: 'Superposition',
+      category: 'quantum',
+      defTr: 'Bir kuantum sisteminin ölçüm yapılana kadar olası tüm durumların lineer kombinasyonunda aynı anda bulunması.',
+      defEn: 'Principle stating a quantum entity simultaneously inhabits a linear combination of all possible basis states until measurement.'
+    },
+    {
+      term: 'Qubit (Kuantum Biti)',
+      termEn: 'Qubit',
+      category: 'information',
+      defTr: 'Klasik 0 veya 1 bitinin aksine, |0⟩ ve |1⟩ durumlarının aynı anda süperpozisyonunu taşıyabilen temel kuantum bilgisi birimi.',
+      defEn: 'The fundamental unit of quantum information, capable of existing in superpositions of basis states |0⟩ and |1⟩.'
+    },
+    {
+      term: 'It from Bit',
+      termEn: 'It from Bit',
+      category: 'information',
+      defTr: 'John Archibald Wheeler\'ın fiziksel evrendeki her nesnenin (It) temelinde ikili bilgi sorgularının (Bit) yattığını savunan ontolojik tezi.',
+      defEn: 'John Wheeler\'s doctrine that all physical reality originates from binary informational yes/no measurements.'
+    },
+    {
+      term: 'Landauer İlkesi',
+      termEn: 'Landauer\'s Principle',
+      category: 'information',
+      defTr: '1 bit bilginin silinmesinin çevreye en az k_B T ln 2 kadar termodinamik ısı yaymak zorunda olduğunu belirten fizik kuralı.',
+      defEn: 'Physical principle proving that erasing 1 bit of information irreversibly dissipates at least k_B T ln 2 thermal energy.'
+    },
+    {
+      term: 'Bekenstein Sınırı (Bekenstein Bound)',
+      termEn: 'Bekenstein Bound',
+      category: 'cosmology',
+      defTr: 'Sonlu bir hacim ve enerjiye sahip bir fiziksel bölgede depolanabilecek maksimum enformasyon (entropi) miktarının üst sınırı.',
+      defEn: 'Universal upper limit on the entropy or information that can be contained within a given finite region of space and energy.'
+    },
+    {
+      term: 'Holografik İlke (Holographic Principle)',
+      termEn: 'Holographic Principle',
+      category: 'cosmology',
+      defTr: '3 boyutlu bir uzay hacminin tüm fiziksel içeriğinin, o hacmi çevreleyen 2 boyutlu sınır yüzeyindeki kuantum bilgisiyle tam olarak kodlanabilmesi.',
+      defEn: 'Property of quantum gravity asserting that the physics of a volume can be fully encoded on its lower-dimensional boundary.'
+    },
+    {
+      term: 'AdS/CFT İkiliği (Maldacena Duality)',
+      termEn: 'AdS/CFT Correspondence',
+      category: 'cosmology',
+      defTr: 'Anti-de Sitter uzayındaki yerçekimli sicim teorisi ile sınırındaki Konformal Alan Teorisi (CFT) arasındaki matematiksel tam denklik.',
+      defEn: 'Mathematical equivalence between a higher-dimensional gravitational theory in Anti-de Sitter space and a boundary gauge field theory.'
+    },
+    {
+      term: 'Hücresel Otomat (Cellular Automaton)',
+      termEn: 'Cellular Automaton',
+      category: 'information',
+      defTr: 'Ayrık ızgaralardaki hücrelerin komşularına bağlı basit algoritmik kurallarla güncellendiği deterministik matematiksel model.',
+      defEn: 'A discrete computational model where grid cells evolve synchronously according to local transition rules.'
+    },
+    {
+      term: 'Klonlanamazlık Teoremi (No-Cloning Theorem)',
+      termEn: 'No-Cloning Theorem',
+      category: 'quantum',
+      defTr: 'Bilinmeyen bir kuantum durumunun birebir kopyasının (klonunun) oluşturulmasının kuantum mekaniği yasalarınca imkansız olması.',
+      defEn: 'Fundamental theorem of quantum mechanics stating that an identical copy of an arbitrary unknown quantum state cannot be created.'
+    },
+    {
+      term: 'Margolus-Levitin Sınırı',
+      termEn: 'Margolus-Levitin Bound',
+      category: 'quantum',
+      defTr: 'Ortalama enerjisi E olan bir kuantum sisteminin saniyede gerçekleştirebileceği maksimum ortogonal durum değişim sayısı (R_max = 2E / π ℏ).',
+      defEn: 'Quantum speed limit determining the maximum rate of orthogonal state transitions per second given energy E.'
+    },
+    {
+      term: 'Simülasyon Trilemması (Simulation Trilemma)',
+      termEn: 'Simulation Argument',
+      category: 'cosmology',
+      defTr: 'Nick Bostrom\'un gelişmiş uygarlıkların simülasyon kapasitesi üzerinden neredeyse kesinlikle bir bilgisayar simülasyonunda olduğumuzu öne süren Bayesyen tezi.',
+      defEn: 'Nick Bostrom\'s Bayesian argument establishing that we are overwhelmingly likely living in a computer simulation.'
     }
   ]
 };
