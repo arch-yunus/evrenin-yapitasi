@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%" style="background: #030712; border-radius: 16px;">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021c1e"/>
+      <stop offset="50%" stop-color="#070c1e"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <radialGradient id="blackholeCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="70%" stop-color="#050510"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </radialGradient>
+    <filter id="glow4">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="350" fill="url(#bgGrad4)" rx="16"/>
+
+  <!-- Matrix Binary Rain Background (Faint) -->
+  <g opacity="0.1" font-family="'Fira Code', monospace" font-size="10" fill="#00f2fe">
+    <text x="50" y="50">01101001 01110100</text>
+    <text x="50" y="100">01100110 01110010</text>
+    <text x="50" y="150">01101111 01101101</text>
+    <text x="50" y="200">01100010 01101001</text>
+    <text x="1000" y="50">10101100 11001010</text>
+    <text x="1000" y="100">01010101 10101010</text>
+    <text x="1000" y="150">11100011 00011100</text>
+    <text x="1000" y="200">01001001 11010110</text>
+  </g>
+
+  <!-- Central Black Hole & Holographic Ring -->
+  <g transform="translate(600, 185)">
+    <!-- Accretion Disk / Holographic Bit Ring -->
+    <ellipse cx="0" cy="0" rx="140" ry="40" fill="none" stroke="#00f2fe" stroke-width="2.5" stroke-dasharray="6,4" filter="url(#glow4)"/>
+    <ellipse cx="0" cy="0" rx="110" ry="30" fill="none" stroke="#06d6a0" stroke-width="1.5" stroke-dasharray="4,6"/>
+    <!-- Event Horizon Black Circle -->
+    <circle cx="0" cy="0" r="48" fill="#000000" stroke="#00f2fe" stroke-width="2" filter="url(#glow4)"/>
+    <text x="0" y="4" font-family="'Fira Code', monospace" font-size="11" fill="#00f2fe" text-anchor="middle" font-weight="bold">IT FROM BIT</text>
+  </g>
+
+  <!-- Left Card: Landauer Principle -->
+  <g transform="translate(200, 185)">
+    <rect x="-100" y="-45" width="200" height="90" rx="12" fill="rgba(15, 23, 42, 0.85)" stroke="#06d6a0" stroke-width="1"/>
+    <text x="0" y="-20" font-family="Inter, sans-serif" font-size="11" fill="#06d6a0" text-anchor="middle" font-weight="bold">LANDAUER İLKESİ</text>
+    <text x="0" y="5" font-family="'Fira Code', monospace" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">E_min ≥ k_B T ln 2</text>
+    <text x="0" y="25" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">"Bilgi Fizikseldir"</text>
+  </g>
+
+  <!-- Right Card: Bekenstein-Hawking Holographic Formula -->
+  <g transform="translate(1000, 185)">
+    <rect x="-100" y="-45" width="200" height="90" rx="12" fill="rgba(15, 23, 42, 0.85)" stroke="#00f2fe" stroke-width="1"/>
+    <text x="0" y="-20" font-family="Inter, sans-serif" font-size="11" fill="#00f2fe" text-anchor="middle" font-weight="bold">HOLOGRAFİK SINIR</text>
+    <text x="0" y="5" font-family="'Fira Code', monospace" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">S = k_B A / (4 ℓ_P²)</text>
+    <text x="0" y="25" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">1 Bit = 4 Planck Alanı</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="48" font-family="Inter, sans-serif" font-size="18" fill="#00f2fe" font-weight="800" text-anchor="middle" letter-spacing="1.5">
+    💾 DİJİTAL FİZİK VE ENFORMASYON PARADİGMASI
+  </text>
+  <text x="600" y="72" font-family="'Fira Code', monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    "Her fiziksel varlık (It), kökeninde bir evet/hayır ikili bilgi sorgusuna (Bit) dayanır." — John Wheeler
+  </text>
+</svg>

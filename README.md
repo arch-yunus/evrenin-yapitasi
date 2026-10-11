@@ -21,6 +21,24 @@ Bu proje; insanlığın evrenin temel yapıtaşlarına dair anlayışının **"M
 
 ---
 
+## 🎨 Görsel Galeri & Tematik Bannerlar
+
+Portal genelinde yer alan 5 yüksek çözünürlüklü tematik görsel:
+
+| 🌌 1. Maddeden Yazılıma Büyük Dönüşüm | 🏛️ 2. Antik Doğa Felsefesi & Arkhe |
+| :---: | :---: |
+| ![Maddeden Yazılıma](assets/banners/banner_1_matter_to_bit.png) | ![Antik Arkhe](assets/banners/banner_2_ancient_arche.png) |
+
+| ⚛️ 3. Kuantum Alan Teorisi & Dalga Girişimi | 💾 4. It from Bit & Holografik Kara Delik |
+| :---: | :---: |
+| ![Kuantum Alanları](assets/banners/banner_3_quantum_fields.png) | ![It from Bit](assets/banners/banner_4_it_from_bit.png) |
+
+| 🌐 5. Simüle Multiverse & Kuantum Hesaplama |
+| :---: |
+| ![Simüle Evren](assets/banners/banner_5_simulated_universe.png) |
+
+---
+
 ## 🏛️ Üç Büyük Ontolojik Devrim
 
 ```mermaid

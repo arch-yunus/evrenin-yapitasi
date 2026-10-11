@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%" style="background: #030712; border-radius: 16px;">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120520"/>
+      <stop offset="50%" stop-color="#070c1e"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="multiGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#9d4edd"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <filter id="glow5">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="350" fill="url(#bgGrad5)" rx="16"/>
+
+  <!-- Cellular Automata Hexagon / Pixel Grid in background -->
+  <g opacity="0.15" stroke="#9d4edd" stroke-width="1" fill="none">
+    <polygon points="500,140 530,125 560,140 560,175 530,190 500,175"/>
+    <polygon points="560,140 590,125 620,140 620,175 590,190 560,175"/>
+    <polygon points="620,140 650,125 680,140 680,175 650,190 620,175"/>
+    <polygon points="680,140 710,125 740,140 740,175 710,190 680,175"/>
+    <polygon points="530,190 560,175 590,190 590,225 560,240 530,225"/>
+    <polygon points="590,190 620,175 650,190 650,225 620,240 590,225"/>
+    <polygon points="650,190 680,175 710,190 710,225 680,240 650,225"/>
+  </g>
+
+  <!-- 3 Grand Metrics of the Cosmic Computer -->
+
+  <!-- 1. Seth Lloyd Operations -->
+  <g transform="translate(230, 185)">
+    <circle cx="0" cy="0" r="42" fill="rgba(157, 78, 221, 0.12)" stroke="#9d4edd" stroke-width="1.5" filter="url(#glow5)"/>
+    <text x="0" y="-8" font-family="'Fira Code', monospace" font-size="16" fill="#c084fc" text-anchor="middle" font-weight="bold">10¹²²</text>
+    <text x="0" y="10" font-family="Inter, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Kuantum İşlemi</text>
+    <text x="0" y="62" font-family="Inter, sans-serif" font-size="11" fill="#c084fc" text-anchor="middle" font-weight="bold">SETH LLOYD</text>
+    <text x="0" y="78" font-family="'Fira Code', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Kozmik Bilgisayar</text>
+  </g>
+
+  <!-- 2. Bostrom Probability -->
+  <g transform="translate(600, 185)">
+    <circle cx="0" cy="0" r="48" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="2" filter="url(#glow5)"/>
+    <text x="0" y="-8" font-family="'Fira Code', monospace" font-size="18" fill="#00f2fe" text-anchor="middle" font-weight="bold">%99.9</text>
+    <text x="0" y="12" font-family="Inter, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">P(Simülasyon)</text>
+    <text x="0" y="68" font-family="Inter, sans-serif" font-size="12" fill="#00f2fe" text-anchor="middle" font-weight="bold">NICK BOSTROM</text>
+    <text x="0" y="84" font-family="'Fira Code', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Simülasyon Trilemması</text>
+  </g>
+
+  <!-- 3. Universe Information Capacity -->
+  <g transform="translate(970, 185)">
+    <circle cx="0" cy="0" r="42" fill="rgba(255, 209, 102, 0.12)" stroke="#ffd166" stroke-width="1.5" filter="url(#glow5)"/>
+    <text x="0" y="-8" font-family="'Fira Code', monospace" font-size="16" fill="#ffd166" text-anchor="middle" font-weight="bold">10⁹²</text>
+    <text x="0" y="10" font-family="Inter, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Bit Bilgi</text>
+    <text x="0" y="62" font-family="Inter, sans-serif" font-size="11" fill="#ffd166" text-anchor="middle" font-weight="bold">KOZMİK KAPASİTE</text>
+    <text x="0" y="78" font-family="'Fira Code', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Gözlemlenebilir Evren</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="48" font-family="Inter, sans-serif" font-size="18" fill="#ffd166" font-weight="800" text-anchor="middle" letter-spacing="1.5">
+    🌐 SİMÜLASYON HİPOTEZİ VE EVRENSEL HESAPLAMA
+  </text>
+  <text x="600" y="72" font-family="'Fira Code', monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    "Evren bir bilgisayar gibi davranmaz; bizzat kendini hesaplayan bir kuantum bilgisayarıdır." — Seth Lloyd
+  </text>
+</svg>

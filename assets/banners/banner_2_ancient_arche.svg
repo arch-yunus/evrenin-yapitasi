@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%" style="background: #030712; border-radius: 16px;">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180c04"/>
+      <stop offset="50%" stop-color="#070c1e"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="amberGold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="350" fill="url(#bgGrad2)" rx="16"/>
+
+  <!-- Golden Spiral (Pythagoras / Sacred Geometry) -->
+  <path d="M600,175 A90,90 0 0,1 690,265 A140,140 0 0,1 550,405 A220,220 0 0,1 330,185 A350,350 0 0,1 680,-165" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.25"/>
+
+  <!-- Water Wave (Thales) at bottom -->
+  <path d="M0,280 Q300,240 600,280 T1200,280 L1200,350 L0,350 Z" fill="rgba(0, 242, 254, 0.08)"/>
+  <path d="M0,300 Q300,260 600,300 T1200,300 L1200,350 L0,350 Z" fill="rgba(0, 242, 254, 0.12)"/>
+
+  <!-- 4 Pillars of Antiquity -->
+  <!-- 1. Thales: Water -->
+  <g transform="translate(180, 160)">
+    <circle cx="0" cy="0" r="32" fill="rgba(0, 242, 254, 0.1)" stroke="#00f2fe" stroke-width="1.5" filter="url(#glow2)"/>
+    <text x="0" y="8" font-size="24" text-anchor="middle">💧</text>
+    <text x="0" y="52" font-family="Inter, sans-serif" font-size="12" fill="#00f2fe" text-anchor="middle" font-weight="bold">THALES</text>
+    <text x="0" y="68" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Arkhe: Su</text>
+  </g>
+
+  <!-- 2. Anaximander: Apeiron -->
+  <g transform="translate(440, 160)">
+    <circle cx="0" cy="0" r="32" fill="rgba(157, 78, 221, 0.1)" stroke="#9d4edd" stroke-width="1.5" stroke-dasharray="3,3" filter="url(#glow2)"/>
+    <text x="0" y="8" font-size="22" text-anchor="middle">♾️</text>
+    <text x="0" y="52" font-family="Inter, sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="bold">ANAKSIMANDROS</text>
+    <text x="0" y="68" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Arkhe: Apeiron</text>
+  </g>
+
+  <!-- 3. Heraclitus: Fire & Logos -->
+  <g transform="translate(740, 160)">
+    <circle cx="0" cy="0" r="32" fill="rgba(247, 37, 133, 0.1)" stroke="#f72585" stroke-width="1.5" filter="url(#glow2)"/>
+    <text x="0" y="8" font-size="24" text-anchor="middle">🔥</text>
+    <text x="0" y="52" font-family="Inter, sans-serif" font-size="12" fill="#f472b6" text-anchor="middle" font-weight="bold">HERAKLEİTOS</text>
+    <text x="0" y="68" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Ateş &amp; Logos</text>
+  </g>
+
+  <!-- 4. Democritus: Atomos -->
+  <g transform="translate(1000, 160)">
+    <circle cx="0" cy="0" r="32" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" stroke-width="1.5" filter="url(#glow2)"/>
+    <text x="0" y="8" font-size="22" text-anchor="middle">⚛️</text>
+    <text x="0" y="52" font-family="Inter, sans-serif" font-size="12" fill="#fbbf24" text-anchor="middle" font-weight="bold">DEMOKRİTOS</text>
+    <text x="0" y="68" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Atomos &amp; Boşluk</text>
+  </g>
+
+  <!-- Header Text -->
+  <text x="600" y="48" font-family="Inter, sans-serif" font-size="18" fill="#fbbf24" font-weight="800" text-anchor="middle" letter-spacing="1.5">
+    🏛️ ANTİK DOĞA FELSEFESİ VE İLK İLKE (ARKHE) ARAYIŞI
+  </text>
+  <text x="600" y="72" font-family="'Fira Code', monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    "Mitolojik Dogmalardan Evrenin Temel Maddesini Rasyonel Olarak Açıklamaya Doğru İlk Adım"
+  </text>
+</svg>

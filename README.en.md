@@ -21,6 +21,24 @@ This platform documents the evolution of our understanding of reality across thr
 
 ---
 
+## 🎨 Visual Gallery & Thematic Banners
+
+The 5 high-resolution thematic banners embedded across the portal:
+
+| 🌌 1. Grand Evolution from Matter to Bit | 🏛️ 2. Ancient Natural Philosophy & Arche |
+| :---: | :---: |
+| ![Matter to Bit](assets/banners/banner_1_matter_to_bit.png) | ![Ancient Arche](assets/banners/banner_2_ancient_arche.png) |
+
+| ⚛️ 3. Quantum Field Theory & Wave Mechanics | 💾 4. It from Bit & Holographic Black Hole |
+| :---: | :---: |
+| ![Quantum Fields](assets/banners/banner_3_quantum_fields.png) | ![It from Bit](assets/banners/banner_4_it_from_bit.png) |
+
+| 🌐 5. Simulated Multiverse & Quantum Computing |
+| :---: |
+| ![Simulated Universe](assets/banners/banner_5_simulated_universe.png) |
+
+---
+
 ## 🏛️ The Three Ontological Revolutions
 
 ```mermaid
